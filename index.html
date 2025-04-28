@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <section id="signup" class="signup-card">
+      <div class="content">
+        <h1>Stay Updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <div class="points">
+          <p class="point">
+            <img
+              class="icon"
+              src="./assets/images/icon-list.svg"
+              alt="icon-list"
+            />
+            Product discovery and building what matters
+          </p>
+
+          <p class="point">
+            <img src="./assets/images/icon-list.svg" alt="icon-list" />
+            Measuring to ensure updates are a success
+          </p>
+
+          <p class="point">
+            <img src="./assets/images/icon-list.svg" alt="icon-list" /> And much
+            more!
+          </p>
+        </div>
+        <form>
+          <label for="email"
+            >Email address
+
+            <span class="error-msg">Valid email required</span>
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="example@company.com"
+          />
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+      <div class="newsletter-image">
+        <picture>
+          <!-- For mobile devices -->
+          <source
+            srcset="./assets/images/illustration-sign-up-mobile.svg"
+            media="(max-width: 768px)"
+          />
+
+          <!-- For desktop and larger screens -->
+
+          <source
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 769px)"
+          />
+
+          <!-- Fallback image if browser doesn't support <picture> -->
+          <img
+            class="newsletter"
+            src="desktop-image.jpg"
+            alt="Responsive newsletter image"
+            width="100%"
+          />
+        </picture>
+      </div>
+    </section>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <div id="success" class="success-card">
+      <div class="success-content">
+        <img
+          src="./assets/images/icon-success.svg"
+          alt="success-icon"
+          height="70px"
+        />
+        <h1>Thanks for subscribing!</h1>
+
+        <p>
+          A conformation mail has been sent to
+          <strong> ash@loremcompany.com </strong>. Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+        <button type="reset" id="reset">Dismiss message</button>
+      </div>
+    </div>
+    <!-- Success message end -->
+  </body>
+  <script src="./index.js"></script>
+</html>

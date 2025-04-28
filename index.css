@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-bg: hsl(234, 29%, 20%);
+  --white-bg: hsl(0, 0%, 100%);
+  --border-gray: hsl(0, 0%, 58%);
+  --error-color: #ff654a;
+  --card-padding: 40px;
+  --card-radius: 20px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg);
+}
+
+.signup-card {
+  background-color: var(--white-bg);
+  margin: 60px auto;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+}
+
+.point {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.points {
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#email {
+  height: 50px;
+  border-radius: 6px;
+  padding-left: 23px;
+  font-size: 14px;
+  border: 1px solid var(--border-gray);
+}
+
+button {
+  height: 55px;
+  border-radius: 10px;
+  background-color: var(--primary-bg);
+  color: var(--white-bg);
+  font-size: 15px;
+  padding: 0 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  transform: scale(1);
+}
+
+button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-bg);
+  color: var(--primary-bg);
+  transform: scale(1.03);
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 20px;
+  color: var(--primary-bg);
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-msg {
+  display: none;
+  color: var(--error-color);
+}
+
+/* SUCCESS CARD */
+.success-card {
+  background-color: aliceblue;
+  margin: 70px auto 0;
+  max-width: 400px;
+  width: 90%;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  display: none; /* Hide by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-card h1 {
+  font-size: 60px;
+  color: var(--primary-bg);
+  font-weight: bolder;
+  text-align: left;
+}
+
+.success-content {
+  margin-bottom: 20px;
+}
+
+#reset {
+  width: 100%;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  :root {
+    --card-padding: 20px;
+  }
+
+  .signup-card {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+    padding: 0;
+    border-radius: 0;
+    padding-bottom: 50px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .points {
+    margin-top: 0;
+  }
+
+  .success-card {
+    margin-top: 0;
+    border-radius: 0;
+    height: 700px;
+    max-height: 800px;
+    display: none;
+  }
+  .content {
+    padding: 20px;
+  }
+  #reset {
+    margin-top: 140px;
+  }
+}
